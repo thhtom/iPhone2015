@@ -20,6 +20,7 @@
  UITableView *tableview=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     tableview.delegate=self;
     tableview.dataSource=self;
+    [self.view addSubview:tableview];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
