@@ -16,12 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+ UITableView *tableview=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    tableview.delegate=self;
+    tableview.dataSource=self;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+
+    return 2;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return 10;
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    return  cell;
 }
 
 @end
